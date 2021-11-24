@@ -1,4 +1,4 @@
-# PetStore Application
+# PetStore API
 
 ## Introduction
 
