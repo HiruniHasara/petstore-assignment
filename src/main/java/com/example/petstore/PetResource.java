@@ -31,6 +31,14 @@ public class PetResource {
 	public Response getPets() {
 		return Response.ok(DB.getPetTable()).build();
 	}
+	
+	@APIResponses(value = {
+			@APIResponse(responseCode = "200", description = "All Pets", content = @Content(mediaType = MediaType.APPLICATION_JSON, schema = @Schema(ref = "Pet"))) })
+	@GET
+	@Path("types")
+	public Response getPetTypes() {
+		return Response.ok(DB.getPetTypeTable()).build();
+	}
 
 	
 	@APIResponses(value = {
