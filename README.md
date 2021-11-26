@@ -14,3 +14,6 @@ To run the application:
 
     java -jar build/petstore-runner.jar
 
+To launch the test page, open following URL from the browser
+
+    http://localhost:8080/index.html
