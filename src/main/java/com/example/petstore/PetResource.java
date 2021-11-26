@@ -33,7 +33,7 @@ public class PetResource {
 	}
 	
 	@APIResponses(value = {
-			@APIResponse(responseCode = "200", description = "All Pets", content = @Content(mediaType = MediaType.APPLICATION_JSON, schema = @Schema(ref = "Pet"))) })
+			@APIResponse(responseCode = "200", description = "All Pet Types", content = @Content(mediaType = MediaType.APPLICATION_JSON, schema = @Schema(ref = "Pet"))) })
 	@GET
 	@Path("types")
 	public Response getPetTypes() {
