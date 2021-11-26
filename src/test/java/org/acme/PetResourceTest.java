@@ -14,12 +14,12 @@ import javax.ws.rs.core.MediaType;
 public class PetResourceTest {
 
 	@Test
-    public void testPetEndpoint() {
-        given()
-          .when().get("/v1/pets")
-          .then()
-             .statusCode(200);
-    }
+    	public void testPetEndpoint() {
+		given()
+	  		.when().get("/v1/pets")
+	  		.then()
+	     			.statusCode(200);
+    	}
 	
 	@Test
 	public void testPetTypesEndPoint() {
@@ -39,7 +39,7 @@ public class PetResourceTest {
 		given()
 			.body(pet)
 			.header(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON)
-	        .header(HttpHeaders.ACCEPT, MediaType.APPLICATION_JSON)
+	        	.header(HttpHeaders.ACCEPT, MediaType.APPLICATION_JSON)
 			.when().post("/v1/pets/addPet")
 			.then()
 				.statusCode(200);
@@ -48,7 +48,7 @@ public class PetResourceTest {
 	@Test
 	public void testGetPetEndPoint() {
 		given()
-	        .header(HttpHeaders.ACCEPT, MediaType.APPLICATION_JSON)
+	        	.header(HttpHeaders.ACCEPT, MediaType.APPLICATION_JSON)
 			.when().get("/v1/pets/1")
 			.then()
 				.statusCode(200);
@@ -65,7 +65,7 @@ public class PetResourceTest {
 		given()
 			.body(pet)
 			.header(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON)
-	        .header(HttpHeaders.ACCEPT, MediaType.APPLICATION_JSON)
+	        	.header(HttpHeaders.ACCEPT, MediaType.APPLICATION_JSON)
 			.when().put("/v1/pets/updatePet")
 			.then()
 				.statusCode(200);
